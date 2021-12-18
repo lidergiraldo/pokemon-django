@@ -1,0 +1,19 @@
+{% extends 'pokemon/layout.html' %}
+{% load humanize %}
+{% block content %}
+<link rel="icon" href="static/pokebola.png">
+{% for post in posts %}
+<article>
+    <div class="container-article">
+        <img src="{{ post.user.profile.image.url }}">
+        <div>
+            <h2 class="username"><a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}  </a><i class="clock"><time data-time="#">{{ post.timestamp|naturaltime }}</time></i></h2>
+            <h2>Rival de Batalla <a href="#">@{{ post.rival }}</a></h2>
+            <!--<div class="post">{{ post.content }}</div>-->
+        </div>
+    </div>
+</article>
+
+{% endfor %}
+
+{% endblock %}

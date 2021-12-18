@@ -1,0 +1,52 @@
+{% extends 'pokemon/feed.html' %}
+
+{% block content %}
+<link rel="icon" href="../../static/pokebola.png">
+
+<!-- Profile -->
+<div class="profile">
+	<img src="{{ user.profile.image.url }}">
+	<h2>@{{ user.username }}</h2>
+	<!-- <button><a class="follow-button" href="#">Follow</a></button> -->
+</div>
+
+<!-- Follow items -->
+<div class="follow">
+	<div>
+		<h5>Batallas</h5>
+		<p>{{ user.posts.count }}</p>
+	</div>
+</div>
+
+<div class="container-card">
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+	<div class="card">
+		<img src="../../static/pikachu.jpg" >
+		<h4>Pikachu</h4>
+	</div>
+</div>
+
+<hr>
+
+{{ block.super }}
+
+{% endblock content %}

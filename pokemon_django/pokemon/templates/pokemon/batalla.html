@@ -1,0 +1,12 @@
+{% extends 'pokemon/layout.html' %}
+
+{% block content %}
+<link rel="icon" href="static/pokebola.png">
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="post" id="">Iniciar</button>
+</form>
+
+{% endblock %}
